@@ -17,10 +17,11 @@
 ;; Backups
 (setq backup-directory-alist '(("." . "~/.emacs.d/saves")))
 
-;; Indentation
+;; Indentation / Whitespace
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (define-key global-map (kbd "RET") 'newline-and-indent)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Fuzzy matching
 (require 'flx-ido)
