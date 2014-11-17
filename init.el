@@ -14,12 +14,19 @@
 (set-face-attribute 'default t :font "Inconsolata-14")
 (load-theme 'tangotango t)
 
+;; Backups
 (setq backup-directory-alist '(("." . "~/.emacs.d/saves")))
 
-;; Set up indentation
+;; Indentation
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; Fuzzy matching
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
 
 ;; Insert matching pairs automatically
 (electric-pair-mode t)
