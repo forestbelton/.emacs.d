@@ -7,4 +7,6 @@
 (depends-on "magit")
 (depends-on "magit-gh-pulls")
 (depends-on "pallet")
+(depends-on "rainbow-mode")
+(depends-on "scss-mode")
 (depends-on "tangotango-theme")
